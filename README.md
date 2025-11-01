@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# 💰 Pay Together
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React application for splitting bills and tracking expenses with friends. Easily manage who owes whom and keep track of your shared expenses.
 
-## Available Scripts
+![Pay Together](https://img.shields.io/badge/React-19.2.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
+## ✨ Features
+
+- 👥 **Friend Management**: Add friends with their name and profile image
+- 💸 **Bill Splitting**: Split bills with friends by entering bill amount and expenses
+- 📊 **Balance Tracking**: Automatically track who owes whom
+  - 🟢 Green: You owe your friend
+  - 🔴 Red: Your friend owes you
+  - ⚫ Black: You're even
+- 📱 **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- 🎨 **Modern UI**: Clean and intuitive user interface
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <https://github.com/hermouchDev/Pay-Together>
+cd pay-together
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📜 Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+pay-together/
+├── public/
+│   └── index.html
+├── src/
+│   ├── Components/
+│   │   ├── FriendsList.js      # Friends list component
+│   │   ├── FormAddFriend.js    # Add friend form
+│   │   └── FormSplitBill.js    # Split bill form
+│   ├── App.js                  # Main application component
+│   ├── index.js                # Application entry point
+│   └── index.css               # Global styles and responsive design
+├── package.json
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 How to Use
 
-### `npm run eject`
+1. **Add a Friend**: Click the "Add Friend" button, enter your friend's name and image URL
+2. **Select a Friend**: Click "Select" on any friend in the list to split a bill
+3. **Split a Bill**: 
+   - Enter the total bill amount
+   - Enter your expense
+   - Select who is paying the bill
+   - Click "Split bill"
+4. **Track Balances**: View balances next to each friend's name (color-coded for easy identification)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React** 19.2.0 - UI library
+- **CSS3** - Styling with responsive design
+- **React Hooks** - State management (useState)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📱 Responsive Design
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The app is fully responsive with breakpoints for:
+- **Desktop**: Full two-column layout
+- **Tablet** (< 900px): Stacked layout with optimized forms
+- **Mobile** (< 600px): Single column with mobile-friendly buttons and spacing
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues, and feature requests are welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👤 Author
 
-### Code Splitting
+Hermouch Abdelmajid
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ using React
