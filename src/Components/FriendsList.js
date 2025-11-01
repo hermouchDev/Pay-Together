@@ -1,20 +1,26 @@
-export default function FriendsList({friends}) {
+export default function FriendsList({ friends, onSelection, selectedFriend }) {
     // const friends = initialFriends;
 
     return (
         <>
             <ul>
                 {friends.map((friend) => (
-                    <Friend friend={friend} key={friend.id} />
+                    <Friend
+                        friend={friend}
+                        selectedFriend={selectedFriend}
+                        key={friend.id}
+                        onSelection={onSelection}
+                    />
                 ))}
             </ul>
         </>
     );
 }
 
-function Friend({ friend }) {
+function Friend({ friend, onSelection, selectedFriend }) {
+    const isSelected = selectedFriend?.id === friend.id;
     return (
-        <li>
+        <li className={isSelected ? "selected" : ""}>
             <img src={friend.image} alt={friend.name} />
             <h3>{friend.name}</h3>
             <p
@@ -30,10 +36,13 @@ function Friend({ friend }) {
                     ? `You owe ${friend.name} ${Math.abs(friend.balance)} DH`
                     : friend.balance === 0
                     ? `You and ${friend.name} are even`
-                    : `${friend.name} owes you ${friend.balance} DH`
-                }
+                    : `${friend.name} owes you ${friend.balance} DH`}
             </p>
-            <button className="button">Select</button>
+            <button className="button" onClick={() => onSelection(friend)}>
+                {
+                    isSelected ? 'Close' : 'Select'
+                }
+            </button>
         </li>
     );
 }

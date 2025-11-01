@@ -1,43 +1,50 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function FormAddFriend({onAddFriend}) {
-    const [name, setName] = useState('');
-    const [image, setImage] = useState('https://i.pravatar.cc/48');
+function FormAddFriend({ onAddFriend }) {
+    const [name, setName] = useState("");
+    const [image, setImage] = useState("https://i.pravatar.cc/48");
     const [balance, setBalance] = useState(0);
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (!name || !image ) return;
+        if (!name || !image) return;
 
-        const id = crypto.randomUUID()
+        const id = crypto.randomUUID();
         const newFriend = {
             id,
-            name : name,
-            image : `${image}?=${id}`,
-            balance : balance
-        }
+            name: name,
+            image: `${image}?=${id}`,
+            balance
+        };
 
-
-        setName('');
-        setImage('https://i.pravatar.cc/48');
+        setName("");
+        setImage("https://i.pravatar.cc/48");
         setBalance(0);
 
         onAddFriend(newFriend);
         // console.log(newFriend)
     }
 
-
-    
     return (
         <form className="form-add-friend" onSubmit={handleSubmit}>
             <label>Friend name</label>
-            <input type="text" placeholder="Entre your friend name" value={name} onChange={(e) => setName(e.target.value)}/>
+            <input
+                type="text"
+                placeholder="Entre your friend name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
             <label>Image URL</label>
-            <input type="text" placeholder="Entre image url" value={image} onChange={(e) => setImage(e.target.value)}/>
-            <button className="button">Add</button>
+            <input
+                type="text"
+                placeholder="Entre image url"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+            />
+            <button className="button">Add</button> 
         </form>
-    )
+    );
 }
 
-export default FormAddFriend
+export default FormAddFriend;
