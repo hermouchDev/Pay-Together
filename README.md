@@ -57,7 +57,19 @@ Builds the app for production to the `build` folder. It correctly bundles React 
 
 ## 🏗️ Project Structure
 
-![alt text](image.png)
+pay-together/
+├── public/
+│   └── index.html
+├── src/
+│   ├── Components/
+│   │   ├── FriendsList.js      # Friends list component
+│   │   ├── FormAddFriend.js    # Add friend form
+│   │   └── FormSplitBill.js    # Split bill form
+│   ├── App.js                  # Main application component
+│   ├── index.js                # Application entry point
+│   └── index.css               # Global styles and responsive design
+├── package.json
+└── README.md
 
 ## 🎯 How to Use
 
